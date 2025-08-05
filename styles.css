@@ -1,0 +1,252 @@
+/* Name: Alyssa Yanez Olson */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import 
+url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+	--yellow: #F6D64A;
+	--teal: #55BCD5;
+	--purple: #9B26B0;
+	--blue: #499BD2;
+	--dark-gray: #222222;
+	--light-gray: #EAEAEA;
+	--white: #FFFFFF;
+	--black: #000000;
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
+
+
+/* Header */
+    header {
+        background: linear-gradient(to bottom, var(--teal), white);
+        display: flex;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+h1 {
+    font-family: 'Molle', cursive;
+}
+
+h2 {
+    font-family: 'Molle', cursive;
+}
+
+h3 {
+    font-family: 'Molle', cursive;
+}
+
+h4 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+}
+
+small {
+    font-family: "Montserrat", sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    color: var(--black);
+    background-color: var(--white);
+}
+/* PLAN SECTION */
+#plan > div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 10px;
+    padding: 20px;
+}
+
+#plan {
+    background-color: var(--yellow);
+}
+
+.plan-section {
+    background-color: var(--teal);
+    border-radius: 5px solid #FFFFFF;
+    margin: 10px;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+}
+
+/* TESTIMONIALS SECTION */
+#testimonials > div {
+    display: flex;
+}
+
+/* ABOUT SECTION */
+#about > div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#about {
+    background-color: var(--blue);
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
+form {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* .form-required {
+    color: #DE0B63;
+} */
+
+.required {
+    color: #DE0B63;
+}
+
+#contact form input {
+    border: 2px solid var(--purple);
+    padding: 5px;
+}
+
+/* input[type="radio"] {
+    border: 2px solid var(--purple);
+} */
+
+#mySubmit {
+ background-color: var(--purple);
+ color: white;
+ padding: 10px;
+ margin: 5px;
+}
+
+.footer {
+    justify-content: space-between;
+}
+
+/* 360 */
+@media screen and (max-width: 428px) {
+    #plan > div,
+    #testimonials > div,
+    #about > div {
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* #contact form > div {
+        display: block;
+        padding: 10px;
+    } */
+    #contact form input {
+        display: block;
+        width: 100px;
+        margin: 2px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    #testimonials > div {
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* section > section {
+        flex-direction: column;
+        align-items: center;
+    } */
+}
+
+@media screen and (min-width: 768px) {
+    #testimonials > div {
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        /* flex-direction: column; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    label[for="toggle"] {
+        display: none;
+    }
+}
