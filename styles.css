@@ -219,6 +219,14 @@ footer {
 }
 
 @media screen and (min-width: 320px) {
+
+    header{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+
+    }
+
     #toggle {
         display: none;
     }
@@ -369,13 +377,13 @@ footer {
     }
 
     label[for="toggle"] {
-        background-color: var(--black);
+        background-color: var(--yellow);
         display: block;
-        color: var(--white);
-        text-align: center;
+        color: var(--black);
+        text-align: right;
         align-items: center;
-        width: 100%;
-        left: 0;
+        width: 50%;
+        right: 0;
         position: absolute;
         z-index: 1000;
     }
@@ -389,6 +397,25 @@ footer {
 
 
 @media screen and (min-width: 768px) {
+
+    #menu-toggle ul {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+        border: none;
+    }
+
+    #menu-toggle ul li a {
+        border-bottom: none;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
     #testimonials > div {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
