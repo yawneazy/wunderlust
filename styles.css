@@ -113,7 +113,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    padding: 5px;
+    padding: 10px 10px;
     margin: 5px;
     display: inline-block;
     color: var(--black);
@@ -124,8 +124,8 @@ nav ul li a {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin: 10px;
-    padding: 20px;
+    margin: 5px;
+    padding: 10px;
 }
 
 #plan {
@@ -226,6 +226,10 @@ footer {
         width: 100px;
         margin: 2px;
     }
+
+    #testimonials q {
+        width: 200px;
+    }
 }
 
 @media screen and (min-width: 428px) {
@@ -271,6 +275,65 @@ footer {
 }
 
 @media screen and (min-width: 1920px) {
+    header {
+        /* position: relative; */
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    header h1, header p {
+        margin: 0;
+        display: block;
+        flex-direction: column;
+        /* display: flex;
+        flex-direction: column;  */
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: (3, 1fr);
+    }
+/* 
+    form > :nth-child(1),
+    form > :nth-child(1) {
+        grid-column: 1;
+    }
+
+    form > :nth-child(3),
+    form > :nth-child(4), 
+    form > :nth-child(5) {
+        grid-column: 2;
+    }
+
+
+    form > :nth-child(6),
+    form > :nth-child(7), 
+    form > :nth-child(8) {
+        grid-column: 3;
+    } */
+
+
+    nav {
+        position: fixed;
+        top: 5;
+        right: 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #intro {
+        display: flex;
+        gap: 5rem;
+    }
+
+    #intro  h2, #intro p {
+        width: 50%;
+    }
+
     #plan > div {
         display: flex;
         flex-direction: row;
@@ -279,6 +342,10 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    #testimonials q {
+        max-width: 200px;
     }
 
     #about > div {
