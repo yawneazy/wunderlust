@@ -132,9 +132,16 @@ nav ul li a {
     background-color: var(--yellow);
 }
 
-.plan-section {
+#plan h4 {
+    padding: 10px;
+}
+
+#plan > div > section {
     background-color: var(--teal);
-    border-radius: 5px solid #FFFFFF;
+    border: 3px solid #FFFFFF;
+    height: 250px;
+    width: 300px;
+    border-radius:5px;
     margin: 10px;
     padding: 20px;
     flex: 1;
@@ -190,17 +197,21 @@ form {
  margin: 5px;
 }
 
-.footer {
+footer {
     justify-content: space-between;
+    background-color: #cccccc; 
+    display: flex;
+    padding: 20px;
+    /* margin: 10px; */
 }
 
-/* 360 */
-@media screen and (max-width: 428px) {
+@media screen and (min-width: 320px) {
     #plan > div,
     #testimonials > div,
     #about > div {
         /* display: flex; */
         /* flex-wrap: wrap; */
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -217,35 +228,67 @@ form {
     }
 }
 
-@media screen and (max-width: 550px) {
-
-    #testimonials > div {
+@media screen and (min-width: 428px) {
+    #plan > div,
+    #testimonials > div,
+    #about > div {
         /* display: flex; */
         /* flex-wrap: wrap; */
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    /* section > section {
-        flex-direction: column;
-        align-items: center;
+    /* #contact form > div {
+        display: block;
+        padding: 10px;
     } */
+    #contact form input {
+        display: block;
+        width: 100px;
+        margin: 2px;
+    }
 }
+
 
 @media screen and (min-width: 768px) {
     #testimonials > div {
-        /* display: flex; */
-        /* flex-wrap: wrap; */
-        /* flex-direction: column; */
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        text-align: center;
+        justify-items: center;
+    }
+
+    #plan > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-items: center;
         text-align: center;
     }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1920px) {
+    #plan > div {
+        display: flex;
+        flex-direction: row;
+    }
+    #testimonials > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #about > div {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 10px;
+        padding: 10px;
+    }
+
     label[for="toggle"] {
         display: none;
     }
