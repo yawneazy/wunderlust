@@ -152,7 +152,25 @@ url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@
         text-align: center;
         align-items: center;
     }
+    
+    /* when menu closed on mobile */
+    #menu-toggle label {
+        background-color: var(--yellow);
+        color: var(--black);
+        width: 100px;
+        top: 0px;
+        z-index: 1000;
+        right: 0;
+        
+        /* position: absolute; */
+    }
 
+    /* when menu re-opened */
+    #toggle:checked + label {
+        background-color: var(--black);
+        width: 100%;
+        color: var(--white);
+    }
 h1, h2, h3 {
     font-family: 'Molle', cursive;
 }
@@ -274,110 +292,36 @@ footer {
     /* margin: 10px; */
 }
 
-@media screen and (min-width: 428px) {
-    #toggle {
-        display: none;
-    }
-
-    #menu-toggle ul {
-        /* display: none; */
-        /* display: flex !important; */
-        flex-direction: column;
-        background-color: var(--teal);
-        width: 100%;
-        align-items: center;
-        left: 0;
-        position: absolute;
-        z-index: 1000;
-    }
-
-    #toggle:checked + label + ul {
-        display: flex;
-    }
-
-    label[for="toggle"] {
-        background-color: var(--black);
-        display: block;
-        color: var(--white);
-        text-align: center;
-        align-items: center;
-        width: 100%;
-        padding: 10px;
-        left: 0;
-        position: absolute;
-        z-index: 1000;
-    }
-
-
-    #menu-toggle ul li a {
-        background-color: var(--teal);
-        border-bottom: 1px solid black;
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-
-    #plan > div,
-    #testimonials > div,
-    #about > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    #contact form input {
-        display: block;
-        width: 100px;
-        margin: 2px;
-    }
-
-    #toggle {
-        display: block;
-    }
-    #toggle {
-        display: none;
-    }
-
-    #menu-toggle ul {
-        display: none;
-        flex-direction: column;
-        background-color: var(--teal);
-        left: 0;
-        position: absolute;
-        z-index: 1000;
-    }
-
-    #toggle:checked + label + ul {
-        display: flex;
-    }
-
-    label[for="toggle"] {
-        background-color: var(--yellow);
-        display: block;
-        color: var(--black);
-        text-align: right;
-        align-items: center;
-        width: 50%;
-        right: 0;
-        position: absolute;
-        z-index: 1000;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
 @media screen and (min-width: 768px) {
+
+    header {
+        /* display: flex; */
+        display: grid;
+        /* flex-wrap: wrap; */
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        /* flex-direction: column; */
+        position: relative;
+        /* gap: 1rem; */
+        margin: 0 auto;
+        right: 0;
+        /* flex-basis: 100%; */
+        /* flex-direction: column; */
+    }
+
+    header h1, header p {
+        margin: 0;
+        /* text-align: center; */
+        max-width: 300px;
+        /* display: block; */
+    }
 
     #menu-toggle ul {
         display: flex;
         flex-direction: row;
         background-color: transparent;
-        gap: 1rem;
+        gap: 2rem;
+        justify-content: center;
         align-items: center;
         text-align: center;
         border: none;
@@ -424,7 +368,7 @@ footer {
 @media screen and (min-width: 1920px) {
     header {
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         gap: 3rem;
     }
 
@@ -434,6 +378,18 @@ footer {
         flex-direction: column;
         /* display: flex;
         flex-direction: column;  */
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
     }
 
     form {
@@ -460,17 +416,6 @@ footer {
         grid-column: 3;
     } */
 
-
-    nav {
-        position: fixed;
-        top: 5;
-        right: 0;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: flex-end;
-    }
 
     #intro {
         display: flex;
