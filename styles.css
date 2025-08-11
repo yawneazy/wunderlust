@@ -200,15 +200,11 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 5px;
-    padding: 10px; */
 }
 
 #plan {
     background-color: var(--yellow);
+    padding: 2rem;
 }
 
 #plan h4 {
@@ -221,16 +217,24 @@ nav ul li a {
     height: 250px;
     width: 300px;
     border-radius:5px;
-    margin: 10px;
+    margin:5px;
     padding: 20px;
     flex: 1;
     text-align: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 /* TESTIMONIALS SECTION */
 #testimonials > div {
     display: flex;
+}
+
+#testimonials q {
+    width: 95%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 
 /* ABOUT SECTION */
@@ -246,6 +250,8 @@ nav ul li a {
 
 button {
     font-family: "Montserrat", sans-serif;
+    display: block;
+    width: 95%;
 }
 
 form {
@@ -259,19 +265,23 @@ form {
 .required {
     color: #DE0B63;
 }
-
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #contact form input {
     border: 2px solid var(--purple);
     padding: 5px;
     display: block;
-    width: 100px;
+    width: 95%;
+    align-items: center;
     margin: 2px;
 }
 
+/* not sure how to add purple border around */
+/* .radio-input input[type="radio"] */
 
-#testimonials q {
-    width: 200px;
-}
 /* input[type="radio"] {
     border: 2px solid var(--purple);
 } */
@@ -281,6 +291,7 @@ form {
  color: white;
  padding: 10px;
  margin: 5px;
+ width: 90%;
 }
 
 footer {
@@ -289,11 +300,12 @@ footer {
     display: flex;
     padding: 20px;
     flex-direction: column;
-    /* margin: 10px; */
 }
 
-@media screen and (min-width: 768px) {
+/* STYLES ABOVE SHOULD MATCH 428PX SO I DIDN'T ASS THIS SECTION */
 
+@media screen and (min-width: 768px) {
+/* having trouble getting header and menu items to work. */
     header {
         /* display: flex; */
         display: grid;
@@ -350,6 +362,12 @@ footer {
         justify-items: center;
         text-align: center;
     }
+    /* images were scaling outside boxes */
+    #plan > div > section img {
+        object-fit: contain;
+        width: 50%;
+        height: auto;
+    }
 
     #toggle {
         display: none;
@@ -357,6 +375,20 @@ footer {
 
     label[for="toggle"] {
         display: none;
+    }
+
+    #about > div {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #about > div section {
+        max-width: 150px;
+        box-sizing: border-box;
+        align-items: center;
     }
 
     footer {
@@ -404,29 +436,6 @@ footer {
         flex-direction: column;
     }
 
-    /* #nums {
-        display: flex;
-        flex-direction: column;
-    } */
-    /* form > :nth-child(1),
-    form > :nth-child(1) {
-        grid-column: 1;
-    } */
-/* 
-    form > :nth-child(3),
-    form > :nth-child(4), 
-    form > :nth-child(5) {
-        grid-column: 2;
-    }
-
-
-    form > :nth-child(6),
-    form > :nth-child(7), 
-    form > :nth-child(8) {
-        grid-column: 3;
-    }  */
-
-
     #intro {
         display: flex;
         gap: 5rem;
@@ -444,10 +453,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
-
-    #testimonials q {
-        max-width: 200px;
+        gap: 1rem;
     }
 
     #about > div {
@@ -458,12 +464,37 @@ footer {
         padding: 10px;
     }
 
+    #plan > div > section {
+        background-color: var(--teal);
+        border: 3px solid #FFFFFF;
+        height: 300px;
+        width: 500px;
+        border-radius:5px;
+        margin:5px;
+        padding: 20px;
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
       #toggle {
         display: none;
     }
 
     label[for="toggle"] {
         display: none;
+    }
+
+    #contact form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #contact form input {
+        width: 100%;
     }
 
     footer {
