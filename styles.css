@@ -3,6 +3,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* @import 
+url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -34,11 +36,7 @@ html {
     margin: 0;
     padding: 0;
 }
-body {
-	/* line-height: 1;
-    width: 100%; */
-    /* max-width: 1920px; */
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -54,9 +52,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-@import 
-url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
 	--yellow: #F6D64A;
@@ -346,6 +341,28 @@ footer {
         text-align: center;
         align-items: center;
     }
+    /* got the first 2 images next to each other */
+    #img-grid {
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: auto auto; */
+        gap: 5px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    #img-grid img {
+        display: block;
+        width: 100%;
+    }
+    /* need to try and target the 3rd top image */
+    #img-grid img:nth-child(3) {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
 
     #testimonials > div {
         display: grid;
@@ -426,7 +443,7 @@ footer {
 
     form {
         display: grid;
-        grid-template-columns: (3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
 
