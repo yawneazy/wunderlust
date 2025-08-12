@@ -94,17 +94,7 @@ table {
     header {
         background: linear-gradient(to bottom, var(--teal), white);
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
-        align-items: stretch;
-        /* position: relative; */
-        /* position: relative; */
-        /* gap: 1rem; */
-        /* align-items: center; */
-        /* margin: 0 auto;
-        right: 0;
-        flex-basis: 100%; */
-        /* flex-direction: column; */
     }
 
     header #logo, 
@@ -114,10 +104,11 @@ table {
     }
 
     header #logo {
-        display: inline-flex;
+        display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: auto;
+        flex-direction: row;
+        /* justify-content: space-between;
+        width: auto; */
     }
 
     header > #logo,
@@ -132,15 +123,18 @@ table {
 
     header h1, header p {
         margin: 0;
-        text-align: center;
+        text-align: left;
         max-width: 300px;
-        /* display: block; */
     }
 
     #logo, #menu-toggle {
         flex: 0 0 auto;
-/* 
-        display: inline-flex; */
+        align-items: center;
+    }
+
+    #logo {
+        display: flex;
+        flex: 1;
     }
 
     #toggle {
@@ -148,12 +142,12 @@ table {
     }
 
     #menu-toggle {
-        width: auto;
-        display: inline-block;
+        /* width: auto;
+        display: inline-block; */
         margin-left: auto;
-        position: relative;
+        /* position: relative;
         top: 0;
-        right: 0;
+        right: 0; */
     }
 
     #menu-toggle label {
@@ -211,6 +205,8 @@ table {
         width: 100%;
         color: var(--white);
     }
+
+    /******************* HEADER STYLING DONE  */
 h1, h2, h3 {
     font-family: 'Molle', cursive;
 }
@@ -342,7 +338,7 @@ footer {
     flex-direction: column;
 }
 
-/* STYLES ABOVE SHOULD MATCH 428PX SO I DIDN'T ASS THIS SECTION */
+/* STYLES ABOVE SHOULD MATCH 428PX SO I DIDN'T ADD THIS SECTION */
 
 @media screen and (min-width: 768px) {
 /* having trouble getting header and menu items to work. */
