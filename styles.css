@@ -349,18 +349,11 @@ nav ul li a {
 }
 
 #about > div {
-    /* display: flex; */
     display: grid;
-    /* justify-content: center; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 1rem;
 }
-
-/* #about > div > section {
-    max-width: 150px;
-    margin: 1rem auto;
-} */
 
 #about > div > section img {
     width: 50px;
@@ -373,19 +366,24 @@ nav ul li a {
     padding: 10px;
 }
 
-button {
-    font-family: "Montserrat", sans-serif;
-    display: block;
-    width: 95%;
+/**************************** CONTACT FORM SECTION */
+
+#contact {
+    padding: 10px;
+}
+#contact h4{
+    margin: 20px;
 }
 
 form {
     font-family: "Montserrat", sans-serif;
 }
 
-/* .form-required {
-    color: #DE0B63;
-} */
+.form-required {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
 
 .required {
     color: #DE0B63;
@@ -406,17 +404,29 @@ form {
 
 /* not sure how to add purple border around */
 /* .radio-input input[type="radio"] */
-
-/* input[type="radio"] {
+.radio-input input[type="radio"] {
+    box-sizing: border-box;
+    appearance: none;
+    width: 20px;
+    height: 20px;
     border: 2px solid var(--purple);
-} */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+}
+
+.radio-input input[type="radio"]:checked {
+    background-color: var(--purple);
+}
 
 #mySubmit {
- background-color: var(--purple);
- color: white;
- padding: 10px;
- margin: 5px;
- width: 90%;
+    background-color: var(--purple);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 90%;
 }
 
 footer {
@@ -425,6 +435,12 @@ footer {
     display: flex;
     padding: 20px;
     flex-direction: column;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    width: 95%;
 }
 
 /* STYLES ABOVE SHOULD MATCH 428PX SO I DIDN'T ADD THIS SECTION */
@@ -449,6 +465,9 @@ footer {
         /* text-align: center; */
         max-width: 300px;
         /* display: block; */
+    }
+    #menu-toggle {
+        display: hidden;
     }
 
     #menu-toggle ul {
@@ -512,14 +531,6 @@ footer {
         object-fit: contain;
         width: 50%;
         height: auto;
-    }
-
-    #toggle {
-        display: none;
-    }
-
-    label[for="toggle"] {
-        display: none;
     }
 
     #about > div {
