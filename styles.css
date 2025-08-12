@@ -42,6 +42,10 @@ h1 {
 }
 
 h2 {
+    font-size: 30px;
+}
+
+h3 {
     font-size: 20px;
 }
 
@@ -207,6 +211,11 @@ h1, h2, h3 {
     font-family: 'Molle', cursive;
 }
 
+h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 header h1, header p {
     margin-left: 20px;
 }
@@ -241,7 +250,9 @@ nav ul li a {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    margin: 1rem auto;
+    /* margin: auto; */
   }
 
   #img-grid img {
@@ -284,27 +295,82 @@ nav ul li a {
     box-sizing: border-box;
 }
 
-/* TESTIMONIALS SECTION */
+/*************************** TESTIMONIALS SECTION */
+#testimonials h3 {
+    margin: 20px;
+}
+
+#testimonials {
+    margin: 1rem auto;
+    margin-bottom: 2px;
+}
+
+#testimonials h4 {
+    font-weight: bold;
+}
+
+#testimonials img {
+    margin-top: 5px;
+}
+
+#testimonials p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
 #testimonials > div {
     display: flex;
 }
 
 #testimonials q {
-    width: 95%;
+    width: 70%;
+    font-size: 15px;
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
     display: block;
     margin: 0 auto;
+    margin-bottom: 5px;
 }
 
-/* ABOUT SECTION */
+#testimonials q::before {
+    content: '"';
+}
+
+#testimonials q::after {
+    content: '"';
+}
+
+
+/**************************** ABOUT SECTION */
+
+#about h3 {
+    margin: 20px;
+}
+
 #about > div {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    display: grid;
+    /* justify-content: center; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 1rem;
+}
+
+/* #about > div > section {
+    max-width: 150px;
+    margin: 1rem auto;
+} */
+
+#about > div > section img {
+    width: 50px;
+    height: auto;
+    margin: 1rem auto;
 }
 
 #about {
     background-color: var(--blue);
+    padding: 10px;
 }
 
 button {
@@ -376,8 +442,6 @@ footer {
         /* gap: 1rem; */
         margin: 0 auto;
         right: 0;
-        /* flex-basis: 100%; */
-        /* flex-direction: column; */
     }
 
     header h1, header p {
