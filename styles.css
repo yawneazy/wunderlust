@@ -74,6 +74,10 @@ table {
 	--light-gray: #EAEAEA;
 	--white: #FFFFFF;
 	--black: #000000;
+    font-size: 16px;
+    --heading-font: "Molle", sans-serif;
+    --body-font: "Montserrat", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 .sr-only {
@@ -99,6 +103,7 @@ table {
         background: linear-gradient(to bottom, var(--teal), white);
         display: flex;
         flex-direction: column;
+        gap: 1rem;
     }
 
     header #logo, 
@@ -250,9 +255,7 @@ nav ul li a {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    /* margin-top: 10px; */
     margin: 1rem auto;
-    /* margin: auto; */
   }
 
   #img-grid img {
@@ -341,7 +344,6 @@ nav ul li a {
     content: '"';
 }
 
-
 /**************************** ABOUT SECTION */
 
 #about h3 {
@@ -402,8 +404,7 @@ form {
     margin: 2px;
 }
 
-/* not sure how to add purple border around */
-/* .radio-input input[type="radio"] */
+/* not sure how to add purple border around without it stretching */
 .radio-input input[type="radio"] {
     box-sizing: border-box;
     appearance: none;
@@ -640,7 +641,6 @@ button {
         grid-column: 3/4;
         grid-row: 1/2;
         margin-right: 30rem;
-        /* justify-self: end; */
     }
 
     nav {
