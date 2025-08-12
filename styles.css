@@ -504,6 +504,17 @@ button {
         text-align: center;
         align-items: center;
     }
+
+    /************************ INTRO STYLING  */
+
+    #intro {
+        padding: 2rem;
+    }
+
+    #intro p {
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
     /* got the first 2 images next to each other */
     #img-grid {
         display: grid;
