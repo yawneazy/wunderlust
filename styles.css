@@ -37,6 +37,14 @@ html {
     padding: 0;
 }
 
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -88,12 +96,38 @@ table {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        position: relative;
+        align-items: stretch;
+        /* position: relative; */
+        /* position: relative; */
         /* gap: 1rem; */
-        margin: 0 auto;
+        /* align-items: center; */
+        /* margin: 0 auto;
         right: 0;
-        flex-basis: 100%;
+        flex-basis: 100%; */
         /* flex-direction: column; */
+    }
+
+    header #logo, 
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+
+    header #logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+    }
+
+    header > #logo,
+    header > #menu-toggle {
+        order: -1;
+    }
+
+    header nav {
+        position: relative;
+        margin-left: 10px;
     }
 
     header h1, header p {
@@ -103,17 +137,31 @@ table {
         /* display: block; */
     }
 
+    #logo, #menu-toggle {
+        flex: 0 0 auto;
+/* 
+        display: inline-flex; */
+    }
+
     #toggle {
         display: none;
     }
 
     #menu-toggle {
-        width: 100%;
+        width: auto;
+        display: inline-block;
+        margin-left: auto;
+        position: relative;
+        top: 0;
+        right: 0;
     }
 
+    #menu-toggle label {
+        display: inline-block;
+        width: auto;
+    }
     #menu-toggle ul {
         display: none;
-        /* display: flex; */
         flex-direction: column;
         background-color: var(--teal);
         width: 100%;
@@ -133,7 +181,6 @@ table {
         color: var(--white);
         padding: 10px;
         text-align: center;
-        /* align-items: center; */
         width: 100%;
         left: 0;
         position: relative;
@@ -156,8 +203,6 @@ table {
         top: 0px;
         z-index: 1000;
         right: 0;
-        
-        /* position: absolute; */
     }
 
     /* when menu re-opened */
