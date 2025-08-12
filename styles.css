@@ -395,7 +395,7 @@ form {
 }
 #contact form input {
     border: 2px solid var(--purple);
-    padding: 5px;
+    padding: 10px;
     display: block;
     width: 95%;
     align-items: center;
@@ -534,6 +534,25 @@ button {
         grid-column: 1 / -1;
         width: 100%;
     }
+    /***********************/
+    #plan > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    #plan > div > section {
+        border-radius:10px;
+    }
+
+    /* images were scaling outside boxes */
+    #plan > div > section img {
+        object-fit: contain;
+        width: 50%;
+        height: auto;
+    }
 
     #testimonials > div {
         display: grid;
@@ -543,23 +562,11 @@ button {
         justify-items: center;
     }
 
-    #plan > div {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        justify-items: center;
-        text-align: center;
-    }
-    /* images were scaling outside boxes */
-    #plan > div > section img {
-        object-fit: contain;
-        width: 50%;
-        height: auto;
-    }
-
     #about > div {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         gap: 2rem;
         margin: 5px;
         padding: 5px;
@@ -569,6 +576,32 @@ button {
         max-width: 150px;
         box-sizing: border-box;
         align-items: center;
+    }
+
+    #about > div > section img {
+        width: 90%;
+        height: auto;
+        margin: 1rem auto;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+    /* CONTACT FORM STYLING */
+    #contact form {
+        width: 100%;
+        min-width: 600px;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        /* align-items: center; */
+        padding: 1rem;
+    }
+
+    #names, #nums, #selects {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2rem;
     }
 
     footer {
