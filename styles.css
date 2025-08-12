@@ -611,18 +611,36 @@ button {
 }
 
 @media screen and (min-width: 1920px) {
+
     header {
-        display: flex;
-        /* align-items: center; */
-        gap: 3rem;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto auto;
+        position: relative;
+        align-items: start;
     }
 
-    header h1, header p {
+    #logo {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    header h1 {
+        grid-column: 2/3;
+        grid-row: 1/2;
         margin: 0;
-        display: block;
-        flex-direction: column;
-        /* display: flex;
-        flex-direction: column;  */
+    }
+
+    header p {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    header nav {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-right: 30rem;
+        /* justify-self: end; */
     }
 
     nav {
@@ -649,13 +667,20 @@ button {
         flex-direction: column;
     }
 
+    /* grids work best here */
     #intro {
-        display: flex;
-        gap: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+        gap: 1rem;
     }
 
     #intro  h2, #intro p {
-        width: 50%;
+        grid-column: 1/2;
+    }
+
+    #intro #img-grid {
+        grid-column: 2/3;
     }
 
     #plan > div {
