@@ -135,6 +135,10 @@ table {
         max-width: 300px;
     }
 
+    header p {
+        line-height: 1.5rem;
+    }
+
     #logo, #menu-toggle {
         flex: 0 0 auto;
         align-items: center;
