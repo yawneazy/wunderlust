@@ -447,6 +447,7 @@ button {
 
 @media screen and (min-width: 768px) {
 /* having trouble getting header and menu items to work. */
+
     header {
         /* display: flex; */
         display: grid;
@@ -462,12 +463,12 @@ button {
 
     header h1, header p {
         margin: 0;
-        /* text-align: center; */
         max-width: 300px;
-        /* display: block; */
     }
-    #menu-toggle {
-        display: hidden;
+
+    #menu-toggle input#toggle,
+    #menu-toggle label[for="toggle"] {
+        display: none;
     }
 
     #menu-toggle ul {
@@ -490,11 +491,8 @@ button {
     }
     /* got the first 2 images next to each other */
     #img-grid {
-        /* display: flex; */
-        /* flex-wrap: wrap; */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* grid-template-rows: auto auto; */
         gap: 5px;
         box-sizing: border-box;
         margin: 0 auto;
@@ -504,11 +502,11 @@ button {
         display: block;
         width: 100%;
     }
+    
     /* need to try and target the 3rd top image */
-    #img-grid img:nth-child(3) {
+    #img-grid > picture {
+        grid-column: 1 / -1;
         width: 100%;
-        height: auto;
-        margin: 10px;
     }
 
     #testimonials > div {
