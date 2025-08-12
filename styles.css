@@ -90,7 +90,7 @@ table {
     transition: transform 0.3s;
 }
 
-/* Header */
+/*********************** HEADER STYLINGS *******/
     header {
         background: linear-gradient(to bottom, var(--teal), white);
         display: flex;
@@ -107,8 +107,7 @@ table {
         display: flex;
         align-items: center;
         flex-direction: row;
-        /* justify-content: space-between;
-        width: auto; */
+        justify-content: space-between;
     }
 
     header > #logo,
@@ -142,12 +141,9 @@ table {
     }
 
     #menu-toggle {
-        /* width: auto;
-        display: inline-block; */
         margin-left: auto;
-        /* position: relative;
+        z-index: 1000;
         top: 0;
-        right: 0; */
     }
 
     #menu-toggle label {
@@ -206,9 +202,13 @@ table {
         color: var(--white);
     }
 
-    /******************* HEADER STYLING DONE  */
+  
 h1, h2, h3 {
     font-family: 'Molle', cursive;
+}
+
+header h1, header p {
+    margin-left: 20px;
 }
 
 h4, p, small {
@@ -228,6 +228,29 @@ nav ul li a {
     color: var(--black);
     background-color: var(--white);
 }
+
+  /******************* HEADER STYLING DONE  */
+
+  /******************* INTRO STYLING ****************/
+  #intro {
+    margin: 20px;
+  }
+
+  #img-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  #img-grid img {
+    width:300px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
 /* PLAN SECTION */
 #plan > div,  
 #testimonials > div,
